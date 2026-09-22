@@ -42,3 +42,11 @@ print("Total quotes:", len(all_quotes))
 # print(all_quotes[0])
 print(type(all_quotes))
 print(len(all_quotes))
+
+df = pd.DataFrame(all_quotes)
+
+print(df.head())
+print(df.shape)
+print(df.info())
+
+df.to_csv("data/raw/quotes_raw.csv", index=False)
